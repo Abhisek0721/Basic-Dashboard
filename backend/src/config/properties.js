@@ -13,7 +13,7 @@ const properties = {
 
   JWT_EXPIRE: process.env.JWT_EXPIRE || `24h`,
 
-  CLIENT_URL: process.env.CLIENT_URL,
+  CLIENT_URL: process.env.CLIENT_URL ||  `https://basic-dashboard-production.up.railway.app`,
 
   SERVER_URL: process.env.SERVER_URL || `https://dashboard-server-production.up.railway.app`,
 
