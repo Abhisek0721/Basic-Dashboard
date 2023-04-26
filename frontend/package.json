@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "http://localhost:3002",
+  "proxy": "https://dashboard-server-production.up.railway.app",
   "scripts": {
     "start": "vite",
     "dev": "vite",
