@@ -5,7 +5,7 @@ import BarChart from "../components/barChart";
 import LineChart from "../components/lineChart";
 import DonutChart from "../components/DonutChart";
 import ColumnChart from "../components/columnChart";
-import ShowTable from "./Table";
+import properties from "../constants/properties";
 
 const Dashboard = () => {
 
@@ -15,28 +15,28 @@ const Dashboard = () => {
     const [allData, setAllData] = useState([]);
 
     useEffect(()=>{
-        axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/sector/sectorCount`)
+        axios.get(`${properties.SERVER_URL}/api/v1/sector/sectorCount`)
             .then((data)=>{
                 if(data.data?.status){
                     setSectorCount(data.data?.sectorCount);
                 }
             })
         
-        axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/sector/regionCount`)
+        axios.get(`${properties.SERVER_URL}/api/v1/sector/regionCount`)
             .then((data)=>{
                 if(data.data?.status){
                     setRegionCount(data.data?.regionCount);
                 }
             })
 
-        axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/sector/countryCount`)
+        axios.get(`${properties.SERVER_URL}/api/v1/sector/countryCount`)
             .then((data)=>{
                 if(data.data?.status){
                     setCountryCount(data.data?.countryCount);
                 }
             })
 
-        axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/sector/fetchData`)
+        axios.get(`${properties.SERVER_URL}/api/v1/sector/fetchData`)
             .then((data)=>{
                 if(data.data?.status){
                     setAllData(data.data?.allData);
