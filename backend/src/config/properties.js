@@ -15,7 +15,7 @@ const properties = {
 
   CLIENT_URL: process.env.CLIENT_URL,
 
-  SERVER_URL: process.env.SERVER_URL,
+  SERVER_URL: process.env.SERVER_URL || `https://dashboard-server-production.up.railway.app`,
 
 };
 
