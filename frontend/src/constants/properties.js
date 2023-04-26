@@ -1,5 +1,5 @@
 const properties = {
-  PORT: process.env.PORT || 5173,
+  PORT: 5173,
 
   CLIENT_URL: `https://basic-dashboard-production.up.railway.app`,
 
